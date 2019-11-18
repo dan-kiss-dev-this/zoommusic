@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 export default class Artist extends Component {
   state = {
@@ -30,6 +31,7 @@ export default class Artist extends Component {
         <div>sup {this.props.name}</div>
         {this.state.artistData != null ?
           <div>
+
             <ul>
               {this.state.artistData.data.map(element =>
 
@@ -38,7 +40,7 @@ export default class Artist extends Component {
             </ul>
           </div>
           :
-          <div>Loading...</div>
+          <div><div className="lds-dual-ring"></div></div>
         }
       </div>
     );
